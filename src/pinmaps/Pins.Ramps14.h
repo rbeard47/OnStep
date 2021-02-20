@@ -36,9 +36,9 @@
 #endif
 
 // For software SPI
-#if PINMAP == MksGenL2 || PINMAP == MksGenL21
+//#if PINMAP == MksGenL2 || PINMAP == MksGenL21
   #define SSPI_SHARED
-#endif
+//#endif
 #define SSPI_SCK 52
 #define SSPI_MISO 50
 #define SSPI_MOSI 51
@@ -68,7 +68,7 @@
 
 // Pins to Axis1 RA/Azm on RAMPS X
 #define Axis1_EN             38     // Enable
-#if PINMAP == MksGenL2 || PINMAP == MksGenL21
+//#if PINMAP == MksGenL2 || PINMAP == MksGenL21
   #define Axis1_M0           51     // SPI MOSI
   #define Axis1_M0PORT    PORTB
   #define Axis1_M0BIT         2
@@ -79,7 +79,7 @@
   #define Axis1_M2PORT    PORTK
   #define Axis1_M2BIT         1
   #define Axis1_M3           50     // SPI MISO
-#else
+/*#else
   #define Axis1_M0           23     // Microstep Mode 0 or SPI MOSI
   #define Axis1_M0PORT    PORTA
   #define Axis1_M0BIT         1
@@ -90,7 +90,7 @@
   #define Axis1_M2PORT    PORTA
   #define Axis1_M2BIT         5
   #define Axis1_M3         Aux1     // SPI MISO/Fault
-#endif
+#endif*/
 #define Axis1_STEP           54     // Step
 #define Axis1_StepPORT    PORTF     //
 #define Axis1_StepBIT         0     //
@@ -103,7 +103,7 @@
 
 // Axis2 Dec/Alt step/dir driver on RMAPS Y
 #define Axis2_EN             56     // Enable (Pin A2)
-#if PINMAP == MksGenL2 || PINMAP == MksGenL21
+//#if PINMAP == MksGenL2 || PINMAP == MksGenL21
   #define Axis2_M0           51     // SPI MOSI
   #define Axis2_M0PORT    PORTB
   #define Axis2_M0BIT         2
@@ -114,7 +114,7 @@
   #define Axis2_M2PORT    PORTK
   #define Axis2_M2BIT         2
   #define Axis2_M3           50     // SPI MISO
-#else
+/*#else
   #define Axis2_M0           31     // Microstep Mode 0 or SPI MOSI
   #define Axis2_M0PORT    PORTC
   #define Axis2_M0BIT         6
@@ -125,7 +125,7 @@
   #define Axis2_M2PORT    PORTC
   #define Axis2_M2BIT         2
   #define Axis2_M3         Aux2     // SPI MISO/Fault
-#endif
+#endif*/
 #define Axis2_STEP           60     // Step (Pin A6)
 #define Axis2_StepPORT    PORTF     //
 #define Axis2_StepBIT         6     //
