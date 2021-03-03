@@ -550,7 +550,8 @@ void loop2() {
       SerialGPS.end();
       currentSite=0; nv.update(EE_currentSite,currentSite);
 
-      tls.getSite(latitude,longitude);
+      double altitude;
+      tls.getSite(latitude,longitude, altitude);
       tls.get(JD,LMT);
 
       timeZone=nv.read(EE_sites+currentSite*25+8)-128;

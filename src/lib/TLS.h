@@ -53,12 +53,13 @@ class timeLocationSource {
     }
 
     // get the GPS's location
-    void getSite(double &LAT, double &LONG) {
+    void getSite(double &LAT, double &LONG, double &alt) {
       if (!active) return;
       if (!siteIsValid()) return;
 
       LAT =gps.location.lat();
       LONG=-gps.location.lng();
+      alt = gps.altitude.meters();
     }
 };
 
