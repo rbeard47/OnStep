@@ -124,7 +124,10 @@ bool isGuiding() {
 
 // returns true if rapid movement is happening
 bool isSlewing() {
-  return guideDirAxis1 || guideDirAxis2 || trackingState == TrackingMoveTo || trackingSyncInProgress();
+  return (guideDirAxis1 && guideTimerBaseRateAxis1 > guideRates[GR_1X] / 15.0) || 
+  			(guideDirAxis2 && guideTimerBaseRateAxis2 > guideRates[GR_1X] / 15.0) || 
+			trackingState == TrackingMoveTo || 
+			trackingSyncInProgress();
 }
 
 // reactivate or deactivate backlash comp. if necessary
